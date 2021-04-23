@@ -32,6 +32,7 @@ int main ()
   }
 }
 ###Lexical Specification###
+
 the lexical elements of Mini-C. Whitespace is ignored, anything following \ to the end of the line is treated as a comment, and keywords and identifiers are case sensitive. If you use the -d option, YACC will generate a header file y.tab.h containing the appropriate constants for multi-character tokens: yacc -d minic.y This header file will also define YYSTYPE which is used to define semantic stack attributes for the various terminals and non-terminals in the language
 
 Local and global variables, parameters.
@@ -84,18 +85,23 @@ args -> arg_list | ϵ arg_list -> expr arg_list' arg_list' -> , expr arg_list' |
 
 
 ###Approach###
+
 At first these tasks seem to be difficult becasue we had no clue what to do but after our teachers guidance and with the help of internet we started working on the project our project runs with a main bash file once excuted our flex will start checking the test cases that we had put and then generate a lex.yy.c file which gives a detailed view of how flex helped us as a analyzer. Our flex script is divided into three parts first part is the defination part where all the neccessary header files are and then next section contains all the rules. Rules are basically all the valid regular expressions for tokens, keywords and identifiers. After that there is a code section in code section different codes are written that have to be tested.After the lexical phase, the compiler enters the syntax analysis phase. This analysis isdone by a parser. The parser uses the stream of tokens from scanner and assigns themdatatype if they are identifiers.The parser code has a functionality of taking input through a file or through standardinput. This makes it more user-friendly and efficient at the same time.
 
 
 ##Problems Faced##
+
 Following are the problems that we faced 
 
 ###Problem 1: We had some issues using ubuntu###
+
 Ubuntu was a issue for us becasue we had no or a little expereince of using ubuntu.But time to time we improved in that 
 
 ###Problem 2:Working with a completely different language ###
+
 Working on this new language for us known as mini-c was new but still did it with the help of internet it was not as easy as we thought it would be.
 
 ##References##
  [https://docs.huihoo.com/solaris/2.6/802-5880/6i9k05dgj/index.html]
+ 
  [https://raw.githubusercontent.com/mishal23/mini-c-compiler/master/Parser/Parser%20Report.pdf](https://raw.githubusercontent.com/mishal23/mini-c-compiler)
